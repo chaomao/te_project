@@ -1,5 +1,6 @@
 Given /^I login TE with username "([^"]*)" and password "([^"]*)"$/ do |username, password|
-  my_browser.goto("http://te.thoughtworks.com")
+  @te_page = TELoginPage.new(my_browser)
+  @te_page.login(username, password)
 end
 
 When /^I add a new expense report with project code "([^"]*)"$/ do |project_code|
