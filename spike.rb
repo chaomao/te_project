@@ -1,3 +1,7 @@
+require 'rubygems'
+require 'watir-webdriver'
+require 'rspec'
+
 def require_dir(dir)
   Dir.foreach(dir) do |entry|
     absolute_path = File.join(dir, entry)
@@ -7,16 +11,9 @@ def require_dir(dir)
   end
 end
 
-require 'rubygems'
-require 'watir-webdriver'
-require 'rspec'
+require_dir File.join(File.dirname(__FILE__), "features/pages")
 
-require_dir File.join(File.dirname(__FILE__), "../pages")
+@browser = Watir::Browser.new :firefox
+@page = TELoginPage.new @browser
 
-module MyBrowser
-  def my_browser
-    @browser ||= Watir::Browser.new :firefox
-  end
-end
-
-World(MyBrowser)
+@page.login("123", "123")
