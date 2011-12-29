@@ -1,6 +1,8 @@
 Given /^I login TE with username "([^"]*)" and password "([^"]*)"$/ do |username, password|
-  @te_page = TELoginPage.new(my_browser)
-  @te_page.login(username, password)
+  @te_page = TEPage.new(my_browser)
+  @te_page.username.set(username)
+  @te_page.password.set(password)
+  @te_page.login.click
 end
 
 When /^I add a new expense report with project code "([^"]*)"$/ do |project_code|
