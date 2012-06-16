@@ -11,106 +11,107 @@ def require_dir(dir)
   end
 end
 
-data = [{"number" => "0", "category"=>"Business Meals", "date"=>"3 June 2011",
-         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
-         "description" => "description", "vendor"=>"vendor",
-         "payment"=>"Personal Card", "attendees"=>"attendees"
-        },
-        {"number" => "1", "category"=>"Business Meals", "date"=>"3 June 2011",
-         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
-         "description" => "description", "vendor"=>"vendor",
-         "payment"=>"Personal Card", "attendees"=>"attendees"
-        },
-        {"number" => "2", "category"=>"Business Meals", "date"=>"3 June 2011",
-         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
-         "description" => "description", "vendor"=>"vendor",
-         "payment"=>"Personal Card", "attendees"=>"attendees"
-        },
-        {"number" => "3", "category"=>"Business Meals", "date"=>"3 June 2011",
-         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
-         "description" => "description", "vendor"=>"vendor",
-         "payment"=>"Personal Card", "attendees"=>"attendees"
-        },
-        {"number" => "4", "category"=>"Business Meals", "date"=>"3 June 2011",
-         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
-         "description" => "description", "vendor"=>"vendor",
-         "payment"=>"Personal Card", "attendees"=>"attendees"
-        },
-        {"number" => "5", "category"=>"Business Meals", "date"=>"3 June 2011",
-         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
-         "description" => "description", "vendor"=>"vendor",
-         "payment"=>"Personal Card", "attendees"=>"attendees"
-        },
-        {"number" => "6", "category"=>"Business Meals", "date"=>"3 June 2011",
-         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
-         "description" => "description", "vendor"=>"vendor",
-         "payment"=>"Personal Card", "attendees"=>"attendees"
-        },
-        {"number" => "7", "category"=>"Business Meals", "date"=>"3 June 2011",
-         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
-         "description" => "description", "vendor"=>"vendor",
-         "payment"=>"Personal Card", "attendees"=>"attendees"
-        },
-        {"number" => "8", "category"=>"Business Meals", "date"=>"3 June 2011",
-         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
-         "description" => "description", "vendor"=>"vendor",
-         "payment"=>"Personal Card", "attendees"=>"attendees"
-        },
-        {"number" => "9", "category"=>"Business Meals", "date"=>"3 June 2011",
-         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
-         "description" => "description", "vendor"=>"vendor",
-         "payment"=>"Personal Card", "attendees"=>"attendees"
-        },
-        {"number" => "10", "category"=>"Business Meals", "date"=>"3 June 2011",
-         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
-         "description" => "description", "vendor"=>"vendor",
-         "payment"=>"Personal Card", "attendees"=>"attendees"
-        },
-        {"number" => "11", "category"=>"Business Meals", "date"=>"3 June 2011",
-         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
-         "description" => "description", "vendor"=>"vendor",
-         "payment"=>"Personal Card", "attendees"=>"attendees"
-        },
-        {"number" => "12", "category"=>"Business Meals", "date"=>"3 June 2011",
-         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
-         "description" => "description", "vendor"=>"vendor",
-         "payment"=>"Personal Card", "attendees"=>"attendees"
-        },
-        {"number" => "13", "category"=>"Business Meals", "date"=>"3 June 2011",
-         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
-         "description" => "description", "vendor"=>"vendor",
-         "payment"=>"Personal Card", "attendees"=>"attendees"
-        },
-        {"number" => "14", "category"=>"Business Meals", "date"=>"3 June 2011",
-         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
-         "description" => "description", "vendor"=>"vendor",
-         "payment"=>"Personal Card", "attendees"=>"attendees"
-        },
-        {"number" => "15", "category"=>"Business Meals", "date"=>"3 June 2011",
-         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
-         "description" => "description", "vendor"=>"vendor",
-         "payment"=>"Personal Card", "attendees"=>"attendees"
-        },
-        {"number" => "16", "category"=>"Business Meals", "date"=>"3 June 2011",
-         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
-         "description" => "description", "vendor"=>"vendor",
-         "payment"=>"Personal Card", "attendees"=>"attendees"
-        },
-        {"number" => "17", "category"=>"Business Meals", "date"=>"3 June 2011",
-         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
-         "description" => "description", "vendor"=>"vendor",
-         "payment"=>"Personal Card", "attendees"=>"attendees"
-        },
-        {"number" => "18", "category"=>"Business Meals", "date"=>"3 June 2011",
-         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
-         "description" => "description", "vendor"=>"vendor",
-         "payment"=>"Personal Card", "attendees"=>"attendees"
-        },
-        {"number" => "19", "category"=>"Business Meals", "date"=>"3 June 2011",
-         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
-         "description" => "description", "vendor"=>"vendor",
-         "payment"=>"Personal Card", "attendees"=>"attendees"
-        },
+data = [
+#        {"number" => "0", "category"=>"Business Meals", "date"=>"3 June 2011",
+#         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
+#         "description" => "description", "vendor"=>"vendor",
+#         "payment"=>"Personal Card", "attendees"=>"attendees"
+#        },
+#        {"number" => "1", "category"=>"Business Meals", "date"=>"3 June 2011",
+#         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
+#         "description" => "description", "vendor"=>"vendor",
+#         "payment"=>"Personal Card", "attendees"=>"attendees"
+#        },
+#        {"number" => "2", "category"=>"Business Meals", "date"=>"3 June 2011",
+#         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
+#         "description" => "description", "vendor"=>"vendor",
+#         "payment"=>"Personal Card", "attendees"=>"attendees"
+#        },
+#        {"number" => "3", "category"=>"Business Meals", "date"=>"3 June 2011",
+#         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
+#         "description" => "description", "vendor"=>"vendor",
+#         "payment"=>"Personal Card", "attendees"=>"attendees"
+#        },
+#        {"number" => "4", "category"=>"Business Meals", "date"=>"3 June 2011",
+#         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
+#         "description" => "description", "vendor"=>"vendor",
+#         "payment"=>"Personal Card", "attendees"=>"attendees"
+#        },
+#        {"number" => "5", "category"=>"Business Meals", "date"=>"3 June 2011",
+#         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
+#         "description" => "description", "vendor"=>"vendor",
+#         "payment"=>"Personal Card", "attendees"=>"attendees"
+#        },
+#        {"number" => "6", "category"=>"Business Meals", "date"=>"3 June 2011",
+#         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
+#         "description" => "description", "vendor"=>"vendor",
+#         "payment"=>"Personal Card", "attendees"=>"attendees"
+#        },
+#        {"number" => "7", "category"=>"Business Meals", "date"=>"3 June 2011",
+#         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
+#         "description" => "description", "vendor"=>"vendor",
+#         "payment"=>"Personal Card", "attendees"=>"attendees"
+#        },
+#        {"number" => "8", "category"=>"Business Meals", "date"=>"3 June 2011",
+#         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
+#         "description" => "description", "vendor"=>"vendor",
+#         "payment"=>"Personal Card", "attendees"=>"attendees"
+#        },
+#        {"number" => "9", "category"=>"Business Meals", "date"=>"3 June 2011",
+#         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
+#         "description" => "description", "vendor"=>"vendor",
+#         "payment"=>"Personal Card", "attendees"=>"attendees"
+#        },
+#        {"number" => "10", "category"=>"Business Meals", "date"=>"3 June 2011",
+#         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
+#         "description" => "description", "vendor"=>"vendor",
+#         "payment"=>"Personal Card", "attendees"=>"attendees"
+#        },
+#        {"number" => "11", "category"=>"Business Meals", "date"=>"3 June 2011",
+#         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
+#         "description" => "description", "vendor"=>"vendor",
+#         "payment"=>"Personal Card", "attendees"=>"attendees"
+#        },
+#        {"number" => "12", "category"=>"Business Meals", "date"=>"3 June 2011",
+#         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
+#         "description" => "description", "vendor"=>"vendor",
+#         "payment"=>"Personal Card", "attendees"=>"attendees"
+#        },
+#        {"number" => "13", "category"=>"Business Meals", "date"=>"3 June 2011",
+#         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
+#         "description" => "description", "vendor"=>"vendor",
+#         "payment"=>"Personal Card", "attendees"=>"attendees"
+#        },
+#        {"number" => "14", "category"=>"Business Meals", "date"=>"3 June 2011",
+#         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
+#         "description" => "description", "vendor"=>"vendor",
+#         "payment"=>"Personal Card", "attendees"=>"attendees"
+#        },
+#        {"number" => "15", "category"=>"Business Meals", "date"=>"3 June 2011",
+#         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
+#         "description" => "description", "vendor"=>"vendor",
+#         "payment"=>"Personal Card", "attendees"=>"attendees"
+#        },
+#        {"number" => "16", "category"=>"Business Meals", "date"=>"3 June 2011",
+#         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
+#         "description" => "description", "vendor"=>"vendor",
+#         "payment"=>"Personal Card", "attendees"=>"attendees"
+#        },
+#        {"number" => "17", "category"=>"Business Meals", "date"=>"3 June 2011",
+#         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
+#         "description" => "description", "vendor"=>"vendor",
+#         "payment"=>"Personal Card", "attendees"=>"attendees"
+#        },
+#        {"number" => "18", "category"=>"Business Meals", "date"=>"3 June 2011",
+#         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
+#         "description" => "description", "vendor"=>"vendor",
+#         "payment"=>"Personal Card", "attendees"=>"attendees"
+#        },
+#        {"number" => "19", "category"=>"Business Meals", "date"=>"3 June 2011",
+#         "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
+#         "description" => "description", "vendor"=>"vendor",
+#         "payment"=>"Personal Card", "attendees"=>"attendees"
+#        },
         {"number" => "20", "category"=>"Business Meals", "date"=>"3 June 2011",
          "amount"=>"123", "currency"=>"CNY - Yuan Renminbi",
          "description" => "description", "vendor"=>"vendor",
@@ -152,3 +153,5 @@ data.each_with_index do |data_item, id|
   @page.payment(id).select(data_item["payment"])
   @page.attendees(id).set(data_item["attendees"])
 end
+
+@page.save_as_draft

@@ -1,8 +1,8 @@
 class TEPage
-
   TE_URL = "http://te.thoughtworks.com"
+  PREFIX = "activities_0_items"
 
-  def initialize browser
+  def initialize(browser)
     @browser = browser
     @browser.goto(TE_URL)
   end
@@ -19,41 +19,37 @@ class TEPage
     @browser.text_field(:id => "activities_0_activity")
   end
 
-  def prefix
-    "activities_0_items"
-  end
-
   # id : 0...9,10,...
   def category(id)
-    @browser.select_list(:id => "#{prefix}_#{id}_category")
+    @browser.select_list(:id => "#{PREFIX}_#{id}_category")
   end
 
   def date(id)
-    @browser.text_field(:id=>"#{prefix}_#{id}_item_date_string")
+    @browser.text_field(:id => "#{PREFIX}_#{id}_item_date_string")
   end
 
   def amount(id)
-    @browser.text_field(:id=>"#{prefix}_#{id}_amount")
+    @browser.text_field(:id => "#{PREFIX}_#{id}_amount")
   end
 
   def currency(id)
-    @browser.select_list(:id => "#{prefix}_#{id}_currency")
+    @browser.select_list(:id => "#{PREFIX}_#{id}_currency")
   end
 
   def description(id)
-    @browser.text_field(:id=>"#{prefix}_#{id}_description")
+    @browser.text_field(:id => "#{PREFIX}_#{id}_description")
   end
 
   def vendor(id)
-    @browser.text_field(:id=>"#{prefix}_#{id}_vendor")
+    @browser.text_field(:id => "#{PREFIX}_#{id}_vendor")
   end
 
   def payment(id)
-    @browser.select_list(:id=>"#{prefix}_#{id}_payment")
+    @browser.select_list(:id => "#{PREFIX}_#{id}_payment")
   end
 
   def attendees(id)
-    @browser.text_field(:id=>"#{prefix}_#{id}_attendees")
+    @browser.text_field(:id => "#{PREFIX}_#{id}_attendees")
   end
 
   def add_expense_row
