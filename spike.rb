@@ -139,7 +139,7 @@ def wait_for_expense_row(number)
   end
 end
 
-#wait_for_expense_row(number)
+wait_for_expense_row(number)
 
 (data.size-5).times { |id| wait_for_expense_row id }
 
