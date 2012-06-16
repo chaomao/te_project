@@ -1,3 +1,4 @@
 def te_page
-  @page ||= TEPage.new(my_browser)
+  @browser ||= Watir::Browser.new(:firefox)
+  @page ||= TEPage.new(browser)
 end

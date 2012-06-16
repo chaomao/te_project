@@ -11,7 +11,7 @@ end
 
 When /^I fill expense report$/ do |expense_table|
   data = expense_table.hashes
-  (data.size - 5).times { |i| wait_for_expense_row(i) } if data.size > 5
+  (data.size - 5).times { |i| te_page.wait_for_expense_row(i) } if data.size > 5
   fill_expense(data)
 end
 

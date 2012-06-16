@@ -69,4 +69,13 @@ class TEPage
   def save_as_draft
     @browser.button(:value => "Save as draft")
   end
+
+  def wait_for_expense_row(index)
+    add_expense_row.click
+    category_string = "activities_0_items_#{index + 5}_category"
+    Watir::Wait::until do
+      category = @browser.select_list(:id => category_string)
+      category.exist? && category.visible?
+    end
+  end
 end
