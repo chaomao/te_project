@@ -3,7 +3,7 @@ This project is designed to automatically fill timesheet or expens in your compa
 I think it's easy to use it on mac, please contact me if you want to use it on Windows.
 
 Instructions:
-0.Set up ruby env for 1.9 version,
+0.Set up ruby env for 1.9.2-p290 version,
 1.Go into project folder in command line, create gem set and run "bundle install".
 2.Edit 'Automatically fill expense on TE.feature' file.
 
