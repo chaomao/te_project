@@ -1,4 +1,4 @@
-This project is designed to automatically fill timesheet or expense @ ThoughtWorks Company.
+This project is designed to automatically fill timesheet or expens in your company.
 
 I think it's easy to use it on mac, please contact me if you want to use it on Windows.
 
@@ -14,7 +14,7 @@ Instructions:
    | Business Meals| 22 June 2011|101   |food       |te    |Personal Card|CNY - Yuan Renminbi|chaomao  |
 
    'username' as your cas user name
-   'password' as your cas password or you can use ras code if you use external network
+   'password' as your cas password or you can use RAS CODE if you use external network
    'project_code' as your project code
    At last, you need to edit the data table under 'fill' step and I think you only need modify and clone.
    You should fill data exactly which displayed on the te page, such as "Business Meals" not "business meals"
