@@ -131,14 +131,6 @@ require_dir File.join(File.dirname(__FILE__), "features/pages")
 @page.add_new_expense
 @page.activity_code.set("expense code")
 
-def wait_for_expense_row(number)
-  @page.add_expense_row.click
-  Watir::Wait::until do
-    select = @browser.select_list(:id=>"activities_0_items_#{number+5}_category")
-    select.exist? && select.visible?
-  end
-end
-
 wait_for_expense_row(number)
 
 (data.size-5).times { |id| wait_for_expense_row id }
