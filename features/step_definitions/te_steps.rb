@@ -10,16 +10,19 @@ When /^I add a new expense report with project code "([^"]*)"$/ do |project_code
 end
 
 When /^I fill expense report$/ do |expense_table|
-  data = expense_table.hashes
-  (data.size - 5).times { |i| te_page.wait_for_expense_row(i) } if data.size > 5
-  fill_expense(data)
+  fill_expense(expense_table.hashes)
 end
 
 Then /^I want to save as draft$/ do
   te_page.save_as_draft.click
 end
 
+def add_more_row(data)
+  (data.size - 5).times { |i| te_page.wait_for_expense_row(i) } if data.size > 5
+end
+
 def fill_expense(data)
+  add_more_row(data)
   data.each_with_index do |data_item, id|
     te_page.category(id).select(data_item["category"])
     te_page.date(id).set(data_item["date"])
@@ -31,3 +34,4 @@ def fill_expense(data)
     te_page.attendees(id).set(data_item["attendees"])
   end
 end
+
