@@ -53,9 +53,7 @@ class TEPage
   end
 
   def add_expense_row
-    @browser.links.find do |link|
-      !link.attribute_value(:onclick).nil? && link.attribute_value(:onclick).include?("add_row")
-    end
+    @browser.image(:alt => "Addrow_button")
   end
 
   def add_new_expense
