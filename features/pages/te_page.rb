@@ -2,78 +2,85 @@ class TEPage
   TE_URL = "http://te.thoughtworks.com"
   PREFIX = "activities_0_items"
 
-  def initialize(browser)
-    @browser = browser
-    @browser.goto(TE_URL)
+  def initialize(page)
+    @page = page
   end
 
   def password
-    @browser.text_field(:id => "password")
+    @page.find("#password")
   end
 
   def username
-    @browser.text_field(:id => "username")
+    @page.find("#username")
   end
 
   def activity_code
-    @browser.text_field(:id => "activities_0_activity")
+    @page.find("#activities_0_activity")
   end
 
   # id : 0...9,10,...
   def category(id)
-    @browser.select_list(:id => "#{PREFIX}_#{id}_category")
+    @page.find("##{PREFIX}_#{id}_category")
   end
 
   def date(id)
-    @browser.text_field(:id => "#{PREFIX}_#{id}_item_date_string")
+    @page.find("##{PREFIX}_#{id}_item_date_string")
   end
 
   def amount(id)
-    @browser.text_field(:id => "#{PREFIX}_#{id}_amount")
+    @page.find("##{PREFIX}_#{id}_amount")
   end
 
   def currency(id)
-    @browser.select_list(:id => "#{PREFIX}_#{id}_currency")
+    @page.find("##{PREFIX}_#{id}_currency")
   end
 
   def description(id)
-    @browser.text_field(:id => "#{PREFIX}_#{id}_description")
+    @page.find("##{PREFIX}_#{id}_description")
   end
 
   def vendor(id)
-    @browser.text_field(:id => "#{PREFIX}_#{id}_vendor")
+    @page.find("##{PREFIX}_#{id}_vendor")
   end
 
   def payment(id)
-    @browser.select_list(:id => "#{PREFIX}_#{id}_payment")
+    @page.find("##{PREFIX}_#{id}_payment")
   end
 
   def attendees(id)
-    @browser.text_field(:id => "#{PREFIX}_#{id}_attendees")
+    @page.find("##{PREFIX}_#{id}_attendees")
   end
 
   def add_expense_row
-    @browser.image(:alt => "Addrow_button")
+    @page.find("img[alt='Addrow_button']")
   end
 
   def add_new_expense
-    @browser.goto("https://te.thoughtworks.com/expense_reports/new")
+    @page.visit("https://te.thoughtworks.com/expense_reports/new")
   end
 
   def login
-    @browser.button(:text => "LOGIN")
+    @page.find_button("LOGIN")
   end
 
   def save_as_draft
-    @browser.button(:value => "Save as draft")
+    @page.find_button("Save as draft")
+  end
+
+  def wait_until
+    require "timeout"
+    Timeout.timeout(Capybara.default_wait_time) do
+      sleep(0.1) until value = yield
+      value
+    end
   end
 
   def wait_for_expense_row(index)
     add_expense_row.click
     category_string = "activities_0_items_#{index + 5}_category"
-    Watir::Wait::until do
-      category = @browser.select_list(:id => category_string)
-      category.exist? && category.visible?
+    wait_until do
+      category = @page.find("##{category_string}")
+      category.visible?
     end
   end
 end

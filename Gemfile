@@ -1,5 +1,8 @@
 source 'http://ruby.taobao.org'
 
-gem 'cucumber'
-gem 'rspec'
-gem 'watir-webdriver'
+group :test do
+  gem 'cucumber'
+  gem 'capybara'
+  gem 'pry'
+  gem 'selenium-webdriver'
+end

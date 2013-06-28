@@ -1,4 +1,8 @@
 def te_page
-  @browser ||= Watir::Browser.new(:firefox)
-  @page ||= TEPage.new(@browser)
+  @page ||= TEPage.new(get_page)
+end
+
+def get_page
+  visit(TEPage::TE_URL)
+  page
 end

@@ -1,14 +1,16 @@
-require 'rubygems'
-require 'watir-webdriver'
-require 'rspec'
+ENV["RAILS_ENV"] ||= 'test'
+require 'capybara'
+require 'capybara/dsl'
+require 'capybara/cucumber'
+require 'pry'
 
-def require_dir(dir)
-  Dir.foreach(dir) do |entry|
-    absolute_path = File.join(dir, entry)
-    next if (entry == "." || entry == "..")
-    require absolute_path if (File.file?(absolute_path) && absolute_path.end_with?("rb"))
-    require_dir(absolute_path) if File.directory?(absolute_path)
-  end
+Capybara.configure do |config|
+  config.match = :prefer_exact
+  config.ignore_hidden_elements = false
 end
 
-require_dir File.join(File.dirname(__FILE__), "../pages")
+Capybara.default_wait_time = 10
+Capybara.default_driver = :selenium
+Capybara.run_server = false
+
+World(Capybara)
